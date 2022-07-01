@@ -1,0 +1,44 @@
+server:
+   applicationConnectors:
+    - type: http
+      port: 5020
+   adminConnectors:
+    - type: http
+      port: 5022
+logging:
+  level: INFO
+  loggers:
+    geolocation: DEBUG
+
+# Database settings.
+database:
+  # the name of your JDBC driver
+  driverClass: org.h2.Driver
+
+  # the username
+  user: admin
+
+  # the password
+  password: password
+
+  # the JDBC URL
+  url: jdbc:h2:~/geolocation
+
+  # any properties specific to your JDBC driver:
+  properties:
+    charSet: UTF-8
+    hibernate.dialect: org.hibernate.dialect.H2Dialect
+    hibernate.hbm2ddl.auto: create
+
+  # the maximum amount of time to wait on an empty pool before throwing an exception
+  maxWaitForConnection: 3s
+
+  # the SQL query to run when validating a connection's liveness
+  validationQuery: "/* MyApplication Health Check */ SELECT 1"
+
+  # the minimum number of connections to keep open
+  minSize: 8
+
+  # the maximum number of connections to keep open
+  maxSize: 30
+  
