@@ -1,5 +1,5 @@
 # Geocode api
-How to start the demo application
+How to start the application
 ---
 
 1. Run `mvn clean install` to build your application
