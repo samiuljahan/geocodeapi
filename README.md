@@ -1,5 +1,4 @@
-# demo
-
+# Geocode api
 How to start the demo application
 ---
 
